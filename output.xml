@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230418 15:07:44.832" rpa="false" schemaversion="3">
+<suite id="s1" name="FirstTest" source="c:\Users\ib\IdeaProjects\RobotFramework\FirstTest.robot">
+<test id="s1-t1" name="Test de connexion OK" line="8">
+<kw name="Connexion">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${monURL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230418 15:07:45.048" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230418 15:07:45.048" endtime="20230418 15:07:46.427"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:07:46.428" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230418 15:07:46.427" endtime="20230418 15:07:46.522"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:07:46.523" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230418 15:07:46.558" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 15:07:46.599" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 15:07:46.522" endtime="20230418 15:07:46.599"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 15:07:46.600" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230418 15:07:46.599" endtime="20230418 15:07:46.679"/>
+</kw>
+<status status="PASS" starttime="20230418 15:07:45.046" endtime="20230418 15:07:46.679"/>
+</kw>
+<kw name="Vérifier l'affichage de la page produit">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(),'Products')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230418 15:07:46.694" level="INFO">Current page contains element 'xpath://span[contains(text(),'Products')]'.</msg>
+<status status="PASS" starttime="20230418 15:07:46.680" endtime="20230418 15:07:46.694"/>
+</kw>
+<status status="PASS" starttime="20230418 15:07:46.679" endtime="20230418 15:07:46.694"/>
+</kw>
+<status status="PASS" starttime="20230418 15:07:45.046" endtime="20230418 15:07:46.695"/>
+</test>
+<status status="PASS" starttime="20230418 15:07:44.837" endtime="20230418 15:07:46.696"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="FirstTest">FirstTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
