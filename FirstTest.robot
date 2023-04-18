@@ -17,7 +17,11 @@ Test de connexion utilisateur bloqué
 
 Test de connexion identifiant invalide
     Connexion    locked_out_user    secret_sauce     #appel cnx avec parametre
-    Vérifier l'affichage de la page produit    
+    Vérifier l'affichage de la page produit 
+
+Test add product card
+    Ajouter produit au panier
+    
 
 *** Keywords ***   #unr fonction
 Connexion 
@@ -30,7 +34,14 @@ Connexion
 Vérifier l'affichage de la page produit
     Page Should Contain Element    xpath://span[contains(text(),'Products')] 
 
+Ajouter produit au panier
+    Click Button    id:add-to-cart-sauce-labs-backpack
+    Page Should Contain Element    id:remove-sauce-labs-backpack
+
     
+
+
+
 
 
 

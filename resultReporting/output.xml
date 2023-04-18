@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230418 15:52:12.648" rpa="false" schemaversion="3">
+<suite id="s1" name="FirstTest" source="C:\Users\ib\IdeaProjects\RobotFramework\FirstTest.robot">
+<test id="s1-t1" name="Test de connexion OK" line="10">
+<kw name="Connexion">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${monURL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230418 15:52:12.839" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230418 15:52:12.839" endtime="20230418 15:52:14.555"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:14.556" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230418 15:52:14.555" endtime="20230418 15:52:14.635"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:14.636" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230418 15:52:14.670" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 15:52:14.713" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 15:52:14.636" endtime="20230418 15:52:14.713"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:14.714" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230418 15:52:14.714" endtime="20230418 15:52:14.792"/>
+</kw>
+<status status="PASS" starttime="20230418 15:52:12.838" endtime="20230418 15:52:14.792"/>
+</kw>
+<kw name="Vérifier l'affichage de la page produit">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(),'Products')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230418 15:52:14.803" level="INFO">Current page contains element 'xpath://span[contains(text(),'Products')]'.</msg>
+<status status="PASS" starttime="20230418 15:52:14.793" endtime="20230418 15:52:14.803"/>
+</kw>
+<status status="PASS" starttime="20230418 15:52:14.793" endtime="20230418 15:52:14.803"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<arg>${monURL}</arg>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230418 15:52:14.804" level="FAIL">Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20230418 15:52:14.804" endtime="20230418 15:52:14.804">Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</status>
+</kw>
+<status status="FAIL" starttime="20230418 15:52:12.838" endtime="20230418 15:52:14.804">Teardown failed:
+Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</status>
+</test>
+<test id="s1-t2" name="Test de connexion utilisateur bloqué" line="14">
+<kw name="Connexion">
+<arg>locked_out_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${monURL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230418 15:52:14.807" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230418 15:52:14.807" endtime="20230418 15:52:16.495"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:16.495" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230418 15:52:16.495" endtime="20230418 15:52:16.575"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:16.576" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230418 15:52:16.609" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 15:52:16.652" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 15:52:16.576" endtime="20230418 15:52:16.652"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:16.653" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230418 15:52:16.653" endtime="20230418 15:52:16.702"/>
+</kw>
+<status status="PASS" starttime="20230418 15:52:14.806" endtime="20230418 15:52:16.702"/>
+</kw>
+<kw name="Vérifier l'affichage de la page produit">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(),'Products')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230418 15:52:16.801" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230418 15:52:16.801" level="FAIL">Page should have contained element 'xpath://span[contains(text(),'Products')]' but did not.</msg>
+<status status="FAIL" starttime="20230418 15:52:16.703" endtime="20230418 15:52:16.803"/>
+</kw>
+<status status="FAIL" starttime="20230418 15:52:16.702" endtime="20230418 15:52:16.803"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<arg>${monURL}</arg>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230418 15:52:16.804" level="FAIL">Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20230418 15:52:16.804" endtime="20230418 15:52:16.804">Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</status>
+</kw>
+<status status="FAIL" starttime="20230418 15:52:14.806" endtime="20230418 15:52:16.804">Page should have contained element 'xpath://span[contains(text(),'Products')]' but did not.
+
+Also teardown failed:
+Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</status>
+</test>
+<test id="s1-t3" name="Test de connexion identifiant invalide" line="18">
+<kw name="Connexion">
+<arg>locked_out_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${monURL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230418 15:52:16.808" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230418 15:52:16.807" endtime="20230418 15:52:18.202"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:18.203" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230418 15:52:18.202" endtime="20230418 15:52:18.303"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:18.304" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230418 15:52:18.338" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 15:52:18.389" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 15:52:18.303" endtime="20230418 15:52:18.389"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:18.390" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230418 15:52:18.390" endtime="20230418 15:52:18.437"/>
+</kw>
+<status status="PASS" starttime="20230418 15:52:16.807" endtime="20230418 15:52:18.437"/>
+</kw>
+<kw name="Vérifier l'affichage de la page produit">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(),'Products')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230418 15:52:18.552" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230418 15:52:18.552" level="FAIL">Page should have contained element 'xpath://span[contains(text(),'Products')]' but did not.</msg>
+<status status="FAIL" starttime="20230418 15:52:18.438" endtime="20230418 15:52:18.553"/>
+</kw>
+<status status="FAIL" starttime="20230418 15:52:18.438" endtime="20230418 15:52:18.553"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<arg>${monURL}</arg>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230418 15:52:18.554" level="FAIL">Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20230418 15:52:18.553" endtime="20230418 15:52:18.554">Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</status>
+</kw>
+<status status="FAIL" starttime="20230418 15:52:16.807" endtime="20230418 15:52:18.554">Page should have contained element 'xpath://span[contains(text(),'Products')]' but did not.
+
+Also teardown failed:
+Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</status>
+</test>
+<test id="s1-t4" name="Test add product card" line="22">
+<kw name="Ajouter produit au panier">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 15:52:18.556" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<msg timestamp="20230418 15:52:18.653" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230418 15:52:18.653" level="FAIL">Button with locator 'id:add-to-cart-sauce-labs-backpack' not found.</msg>
+<status status="FAIL" starttime="20230418 15:52:18.556" endtime="20230418 15:52:18.661"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>id:remove-sauce-labs-backpack</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20230418 15:52:18.661" endtime="20230418 15:52:18.661"/>
+</kw>
+<status status="FAIL" starttime="20230418 15:52:18.556" endtime="20230418 15:52:18.661"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<arg>${monURL}</arg>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230418 15:52:18.662" level="FAIL">Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20230418 15:52:18.662" endtime="20230418 15:52:18.662">Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</status>
+</kw>
+<status status="FAIL" starttime="20230418 15:52:18.555" endtime="20230418 15:52:18.662">Button with locator 'id:add-to-cart-sauce-labs-backpack' not found.
+
+Also teardown failed:
+Keyword 'SeleniumLibrary.Close Browser' expected 0 arguments, got 1.</status>
+</test>
+<status status="FAIL" starttime="20230418 15:52:12.649" endtime="20230418 15:52:18.664"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="4" skip="0" id="s1" name="FirstTest">FirstTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
